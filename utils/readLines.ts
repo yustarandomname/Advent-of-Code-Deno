@@ -1,5 +1,12 @@
 import 'https://deno.land/x/dotenv/load.ts';
 
+/**
+ * This function reads in a file from the Advent of Code website.
+ * It requires a session cookie, which can be obtained by logging into the website.
+ * The session cookie should be stored in the .env file, as the SESSION variable.
+ * @param day The day of the Advent of Code
+ * @returns An array of strings, where each string represents a line in the file.
+ */
 export async function readLines(day: number): Promise<string[]> {
   const session = Deno.env.get('SESSION') || '';
   if (!session) {
