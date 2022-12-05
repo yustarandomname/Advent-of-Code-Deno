@@ -1,4 +1,4 @@
-import { pairs, Range } from './getPairs.ts';
+import { pairs } from './getPairs.ts';
 
 let score = 0;
 
@@ -15,7 +15,6 @@ let score = 0;
 for (const { leftRange, rightRange } of pairs) {
   if (leftRange.overlaps(rightRange)) {
     score += 1;
-    console.log(leftRange, 'overlaps', rightRange);
   }
 }
 

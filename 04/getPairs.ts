@@ -2,8 +2,6 @@ import { readLines } from '../utils/readLines.ts';
 
 const lines = await readLines(4);
 
-console.log(lines[lines.length - 2], lines[lines.length - 1]);
-
 export class Range {
   min = 0;
   max = 0;

@@ -8,10 +8,8 @@ for (const { leftRange, rightRange } of pairs) {
 
   if (leftRange.encloses(rightRange)) {
     score += 1;
-    console.log(leftRange, 'includes', rightRange);
   } else if (rightRange.encloses(leftRange)) {
     score += 1;
-    console.log(rightRange, 'includes', leftRange);
   }
 }
 
