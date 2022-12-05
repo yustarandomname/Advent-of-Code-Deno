@@ -1,16 +1,16 @@
 import { pairs } from './getPairs.ts';
 
-let score = 0;
+const score = pairs.reduce((prevScore, currPair) => {
+  const { leftRange, rightRange } = currPair;
 
-// O(n^2)
-for (const { leftRange, rightRange } of pairs) {
-  // if (leftRange.max == 0 && rightRange.max == 0) continue;
+  // We don't care about pairs with zero values
+  if (leftRange.max == 0 && rightRange.max == 0) return prevScore;
 
-  if (leftRange.encloses(rightRange)) {
-    score += 1;
-  } else if (rightRange.encloses(leftRange)) {
-    score += 1;
-  }
-}
+  // We give a point if either range fully encloses the other
+  if (leftRange.encloses(rightRange) || rightRange.encloses(leftRange))
+    return prevScore + 1;
+
+  return prevScore;
+}, 0);
 
 export default score;
