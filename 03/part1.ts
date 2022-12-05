@@ -11,4 +11,4 @@ for (const { left, right } of compartments) {
   });
 }
 
-console.log(score);
+export default score;

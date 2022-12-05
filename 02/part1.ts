@@ -29,4 +29,4 @@ for (const { opponent, you } of choices) {
   if (hasWon(opponent, you)) score += 6;
 }
 
-console.log(score);
+export default score;

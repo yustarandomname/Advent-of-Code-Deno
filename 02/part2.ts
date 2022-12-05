@@ -41,4 +41,4 @@ for (const { opponent, you } of choices) {
   }
 }
 
-console.log(score);
+export default score;

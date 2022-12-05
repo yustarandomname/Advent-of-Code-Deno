@@ -11,4 +11,4 @@ const score = elfGroups.reduce((acc, [one, two, three]) => {
   return acc;
 }, 0);
 
-console.log(score);
+export default score;
